@@ -29,7 +29,6 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        // 1️⃣ Create roles
         for (RoleName roleName : RoleName.values()) {
             roleRepository.findByName(roleName)
                     .orElseGet(() -> {
@@ -39,7 +38,6 @@ public class DataInitializer implements CommandLineRunner {
                     });
         }
 
-        // 2️⃣ Create HR employee + user
         createUserIfNotExists(
                 "hr@erp.com",
                 "password",
@@ -48,7 +46,6 @@ public class DataInitializer implements CommandLineRunner {
                 null
         );
 
-        // 3️⃣ Create Manager
         Employee manager = createUserIfNotExists(
                 "manager@erp.com",
                 "password",
@@ -57,7 +54,6 @@ public class DataInitializer implements CommandLineRunner {
                 null
         );
 
-        // 4️⃣ Create Employee under Manager
         createUserIfNotExists(
                 "employee@erp.com",
                 "password",

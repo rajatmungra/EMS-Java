@@ -21,7 +21,7 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String username;
 
-    private String password; // security later
+    private String password;
 
     @Column(nullable = false)
     private Boolean enabled = true;

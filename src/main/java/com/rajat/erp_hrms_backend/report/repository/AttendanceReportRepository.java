@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public interface AttendanceReportRepository extends Repository<Attendance, Long> {
 
     @Query("""
-    select 
+    select
         count(a.id),
         count(case when a.status = 'CHECKED_OUT' then 1 end),
         coalesce(sum(a.workedHours), 0)

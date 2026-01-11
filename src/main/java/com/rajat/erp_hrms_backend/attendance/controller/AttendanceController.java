@@ -13,7 +13,6 @@ public class AttendanceController {
 
     private final AttendanceService attendanceService;
 
-    // ---------------- CHECK-IN ----------------
     @PostMapping("/{employeeId}/check-in")
     public ApiResponse<AttendanceResponse> checkIn(@PathVariable Long employeeId) {
         return new ApiResponse<>(
@@ -23,7 +22,6 @@ public class AttendanceController {
         );
     }
 
-    // ---------------- CHECK-OUT ----------------
     @PostMapping("/{employeeId}/check-out")
     public ApiResponse<AttendanceResponse> checkOut(@PathVariable Long employeeId) {
         return new ApiResponse<>(

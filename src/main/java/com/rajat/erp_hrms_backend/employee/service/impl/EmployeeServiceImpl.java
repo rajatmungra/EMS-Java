@@ -30,7 +30,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final JobTitleRepository jobTitleRepository;
     private final EmployeeMapper employeeMapper;
 
-    // ---------------- CREATE ----------------
 
     @Override
     public EmployeeResponse createEmployee(EmployeeCreateRequest request) {
@@ -69,7 +68,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeMapper.toResponse(saved);
     }
 
-    // ---------------- ACTIVATE ----------------
 
     @Override
     @PreAuthorize("hasRole('HR_OFFICER')")
@@ -84,7 +82,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeMapper.toResponse(employeeRepository.save(employee));
     }
 
-    // ---------------- DEACTIVATE ----------------
 
     @Override
     public EmployeeResponse deactivateEmployee(Long employeeId) {
@@ -100,7 +97,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employees.stream().map(employeeMapper::toResponse).toList();
     }
 
-    // ---------------- HELPERS ----------------
 
     private Employee getEmployee(Long id) {
         return employeeRepository.findById(id)

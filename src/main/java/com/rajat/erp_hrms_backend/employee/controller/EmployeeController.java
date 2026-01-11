@@ -26,7 +26,6 @@ public class EmployeeController {
         );
     }
 
-    // ---------------- CREATE EMPLOYEE ----------------
     @PostMapping
     public ApiResponse<EmployeeResponse> create(
             @Valid @RequestBody EmployeeCreateRequest request
@@ -38,7 +37,6 @@ public class EmployeeController {
         );
     }
 
-    // ---------------- ACTIVATE EMPLOYEE ----------------
     @PatchMapping("/{id}/activate")
     public ApiResponse<EmployeeResponse> activate(@PathVariable Long id) {
         return new ApiResponse<>(
@@ -48,7 +46,6 @@ public class EmployeeController {
         );
     }
 
-    // ---------------- DEACTIVATE EMPLOYEE ----------------
     @PatchMapping("/{id}/deactivate")
     public ApiResponse<EmployeeResponse> deactivate(@PathVariable Long id) {
         return new ApiResponse<>(

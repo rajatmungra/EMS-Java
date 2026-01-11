@@ -15,7 +15,6 @@ public class LeaveController {
 
     private final LeaveService leaveService;
 
-    // ---------------- APPLY LEAVE ----------------
     @PostMapping("/{employeeId}/apply")
     public ApiResponse<LeaveResponse> applyLeave(
             @PathVariable Long employeeId,
@@ -28,7 +27,6 @@ public class LeaveController {
         );
     }
 
-    // ---------------- APPROVE LEAVE ----------------
     @PatchMapping("/{leaveId}/approve")
     public ApiResponse<LeaveResponse> approveLeave(
             @PathVariable Long leaveId,
@@ -41,7 +39,6 @@ public class LeaveController {
         );
     }
 
-    // ---------------- REJECT LEAVE ----------------
     @PatchMapping("/{leaveId}/reject")
     public ApiResponse<LeaveResponse> rejectLeave(
             @PathVariable Long leaveId,
