@@ -1,21 +1,6 @@
 # ERP HRMS Backend
 
-## Overview
-## Features
-## Architecture
-## Reports
-## Tech Stack
-## Domain Model
-## Security Model
-## API Overview
-## Sample API Flows
-## Setup & Run
-## Test Users
-## Future Enhancements
-
-# ERP HRMS Backend
-
-A production-grade ERP-style Human Resource Management backend built using Spring Boot.
+A ERP-style Human Resource Management backend built using Spring Boot.
 The system manages employee lifecycle, attendance, leave management, and enforces
 role-based and ownership-aware security using JWT.
 
@@ -102,6 +87,9 @@ aggregation queries.
 - LeaveType
 - WorkingCalendar
 
+## ER/Table Diagram
+![Alt text](drawSQL-image-export-2026-01-24.png)
+
 ## Security Model
 
 - JWT-based stateless authentication
@@ -166,6 +154,4 @@ aggregation queries.
 
 - Payroll processing
 - Advanced reporting dashboards
-- Audit logging
-- Refresh token support
 - Microservices decomposition
